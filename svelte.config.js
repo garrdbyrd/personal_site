@@ -1,6 +1,7 @@
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import adapter from '@sveltejs/adapter-static';
 
+const dev = process.argv.includes('dev');
 const config = {
   preprocess: vitePreprocess(),
   kit: {
@@ -12,7 +13,8 @@ const config = {
       strict: true
     }),
     paths: {
-      base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "",
+      // base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "",
+      base: dev ? '' : '/personal_site',
     },
   }
 };
