@@ -16,7 +16,7 @@ const config = {
     }),
     paths: {
       // base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "",
-      base: dev ? '' : '/personal_site',
+      base: dev ? '' : '/docs',
     },
   }
 };
