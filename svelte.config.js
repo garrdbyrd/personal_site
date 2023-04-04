@@ -5,11 +5,11 @@ const config = {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter({
-      // pages: 'build',
-      // assets: 'build',
-      // fallback: null,
-      // precompress: false,
-      // strict: true
+      pages: 'build',
+      assets: 'build',
+      fallback: null,
+      precompress: false,
+      strict: true
     }),
     paths: {
       base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "",
